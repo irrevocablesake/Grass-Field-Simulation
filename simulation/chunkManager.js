@@ -64,7 +64,7 @@ export default class ChunkManager {
         const frustum = new THREE.Frustum()
         frustum.setFromProjectionMatrix( m )
 
-        const cameraBoundary = new Rectangle( this._camera.position.x, this._camera.position.z,  100, 200 )
+        const cameraBoundary = new Rectangle( this._camera.position.x, this._camera.position.z,  200, 200 )
         const visiblePoints = this._quadTree.query( cameraBoundary )
 
         const margin = 1
@@ -83,11 +83,11 @@ export default class ChunkManager {
 
             let targetGeometry = this._grassStrand.getLOD( 2 )
             point.userData.material = this._grassStrand.getMaterialForLOD( 2 )
-            if( distance >= 0 && distance < 10 ){
+            if( distance >= 0 && distance < 15 ){
                 targetGeometry = this._grassStrand.getLOD( 0 )
                 point.userData.material = this._grassStrand.getMaterialForLOD( 0 )
             }
-            else if( distance >= 10 && distance < 20 ){
+            else if( distance >= 15 && distance < 20 ){
                 targetGeometry = this._grassStrand.getLOD( 1 )
                 point.userData.material = this._grassStrand.getMaterialForLOD( 1 )
             }
@@ -101,7 +101,7 @@ export default class ChunkManager {
             //culling
             point.userData.visible = frustum.intersectsBox( box )
 
-            if( distance < 10 ){
+            if( distance < 15 ){
                 point.userData.visible = true
             }
         }
