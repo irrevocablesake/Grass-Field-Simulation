@@ -58,13 +58,13 @@ Performance Results:
         </p>
     </tr>
      <tr>
-     <img src="images/normal/300K.png" width="100%">
+     <img src="images/300K.png" width="100%">
         <p style="text-align: center; font-style: italic; font-size: 14px; color: #555;">
           FPS 110
         </p>
     </tr>
      <tr>
-     <img src="images/normal/400K.png" width="100%">
+     <img src="images/500K.png" width="100%">
         <p style="text-align: center; font-style: italic; font-size: 14px; color: #555;">
           FPS 90
         </p>
