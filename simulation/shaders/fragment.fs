@@ -3,8 +3,6 @@ varying vec4 vGrassData;
 varying vec3 vNormal;
 varying vec3 vWorldPosition;
 
-// uniform sampler2D tileDataTexture;
-
 float inverseLerp( float v, float minValue, float maxValue ){
     return ( v - minValue ) / ( maxValue - minValue );
 }
@@ -29,41 +27,24 @@ vec3 phongSpecular( vec3 normal, vec3 lightDirection, vec3 viewDirection ){
     return specular;
 }
 
-vec3 hemiLight( vec3 normal, vec3 groundColor, vec3 skyColor ){
-    return mix( groundColor, skyColor, 0.5 * normal.y + 0.5 );
-}
-
-vec3 lamberLight( vec3 normal, vec3 viewDirection, vec3 lightDirection, vec3 lightColor ){
-    float wrap = 0.5;
-    float dotNL = saturate(( dot( normal, lightDirection ) + wrap ) / ( 1.0 + wrap ));
-    vec3 lighting = vec3( dotNL );
-
-    float backlight = saturate(( dot( viewDirection, -lightDirection ) + wrap ) / ( 1.0 + wrap ));
-    vec3 scatter = vec3( pow( backlight, 2.0 ));
-
-    lighting += scatter;
-
-    return lighting * lightColor;
-}
-
 void main(){
     
     //a falloff from the center of the grass to the sides
     float grassX = vGrassData.x;
     vec3 baseColor = mix( vColor * 0.75, vColor, smoothstep( 0.125, 0.0, abs( grassX )));
-    vec3 color = baseColor;
 
     //adding very little AO
     float grassY = vGrassData.y;
     float ao = remap( pow( grassY, 0.03 ), 0.0, 1.0, 0.125, 1.0 );
-    color *= ao;
 
     //specular lighting
     vec3 viewDirection = normalize( cameraPosition - vWorldPosition );
     vec3 lightDirection = normalize( vec3( 45.0, 10.5, -5.0 ));
-
     vec3 specular = phongSpecular( vNormal, lightDirection, viewDirection );
 
+    //Mix with final color
+    vec3 color = baseColor;
+    color *= ao;
     color = color + specular * 0.5;
 
     gl_FragColor = vec4( color, 1.0 );

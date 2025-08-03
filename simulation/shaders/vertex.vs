@@ -7,6 +7,7 @@ varying vec4 vGrassData;
 varying vec3 vNormal;
 varying vec3 vWorldPosition;
 
+//functions utilized for hashing
 vec3 hash( vec3 p ){
     p = vec3(
         dot( p, vec3( 123.42342, 123.3213, 1323.312 )),
@@ -15,43 +16,6 @@ vec3 hash( vec3 p ){
     );
 
     return -1.0 + 2.0 * fract( sin( p ) * 4564453.2344 );
-}
-
-mat3 rotateY( float theta ){
-    float c = cos( theta );
-    float s = sin( theta );
-
-    return mat3( 
-        vec3( c, 0, s ),
-        vec3( 0, 1, 0 ),
-        vec3( -s, 0, c )
-    );
-}
-
-float inverseLerp( float v, float minValue, float maxValue ){
-    return ( v - minValue ) / ( maxValue - minValue );
-}
-
-float remap( float v, float inMin, float inMax, float outMin, float outMax ){
-    float t = inverseLerp( v, inMin, inMax );
-    return mix( outMin, outMax, t );
-}
-
-float easeOut( float x, float t ){
-    return 1.0 - pow( 1.0 - x, t );
-}
-
-vec3 bezier( vec3 P0, vec3 P1, vec3 P2, vec3 P3, float t ){
-    return ( 1.0 - t ) * ( 1.0 - t ) * ( 1.0 - t ) * P0 +
-        3.0 * ( 1.0 - t ) * ( 1.0 - t ) * t * P1 +
-        3.0 * ( 1.0 - t ) * t * t * P2 +
-        t * t * t * P3;
-}
-
-vec3 bezierGrad( vec3 P0, vec3 P1, vec3 P2, vec3 P3, float t ){
-    return 3.0 * ( 1.0 - t ) * ( 1.0 -t ) * ( P1 - P0 ) +
-    6.0 * ( 1.0 - t ) * t * ( P2 - P1 ) +
-    3.0 * t * t * ( P3 - P2 );
 }
 
 uvec2 murmurHas21( uint src ) {
@@ -74,14 +38,67 @@ vec2 hash21( float src ){
     return uintBitsToFloat( h & 0x007fffffu | 0x3f800000u ) - 1.0;
 }
 
+//functions utilized for rotation operations
+mat3 rotateY( float theta ){
+    float c = cos( theta );
+    float s = sin( theta );
+
+    return mat3( 
+        vec3( c, 0, s ),
+        vec3( 0, 1, 0 ),
+        vec3( -s, 0, c )
+    );
+}
+
+mat3 rotateAxis(vec3 axis, float angle) {
+    axis = normalize(axis);
+    float s = sin(angle);
+    float c = cos(angle);
+    float oc = 1.0 - c;
+
+    return mat3(
+        oc * axis.x * axis.x + c,           oc * axis.x * axis.y - axis.z * s,  oc * axis.z * axis.x + axis.y * s,
+        oc * axis.x * axis.y + axis.z * s,  oc * axis.y * axis.y + c,           oc * axis.y * axis.z - axis.x * s,
+        oc * axis.z * axis.x - axis.y * s,  oc * axis.y * axis.z + axis.x * s,  oc * axis.z * axis.z + c
+    );
+}
+
+//Helper functions
+float inverseLerp( float v, float minValue, float maxValue ){
+    return ( v - minValue ) / ( maxValue - minValue );
+}
+
+float remap( float v, float inMin, float inMax, float outMin, float outMax ){
+    float t = inverseLerp( v, inMin, inMax );
+    return mix( outMin, outMax, t );
+}
+
+//Leaf Shaping Function
+float easeOut( float x, float t ){
+    return 1.0 - pow( 1.0 - x, t );
+}
+
+//Functions to handle Bezier Curve
+vec3 bezier( vec3 P0, vec3 P1, vec3 P2, vec3 P3, float t ){
+    return ( 1.0 - t ) * ( 1.0 - t ) * ( 1.0 - t ) * P0 +
+        3.0 * ( 1.0 - t ) * ( 1.0 - t ) * t * P1 +
+        3.0 * ( 1.0 - t ) * t * t * P2 +
+        t * t * t * P3;
+}
+
+vec3 bezierGrad( vec3 P0, vec3 P1, vec3 P2, vec3 P3, float t ){
+    return 3.0 * ( 1.0 - t ) * ( 1.0 -t ) * ( P1 - P0 ) +
+    6.0 * ( 1.0 - t ) * t * ( P2 - P1 ) +
+    3.0 * t * t * ( P3 - P2 );
+}
+
+//Custom noise generation function
 float noise(in vec3 p) {
     vec3 i = floor(p);
     vec3 f = fract(p);
 
-    // Fade curve
     vec3 u = f * f * (3.0 - 2.0 * f);
 
-    // Interpolation of dot products of gradient vectors
     return mix(
         mix(
             mix(dot(hash(i + vec3(0.0, 0.0, 0.0)), f - vec3(0.0, 0.0, 0.0)),
@@ -98,32 +115,7 @@ float noise(in vec3 p) {
         u.z);
 }
 
-mat3 rotateAxis(vec3 axis, float angle) {
-    axis = normalize(axis);
-    float s = sin(angle);
-    float c = cos(angle);
-    float oc = 1.0 - c;
-
-    return mat3(
-        oc * axis.x * axis.x + c,           oc * axis.x * axis.y - axis.z * s,  oc * axis.z * axis.x + axis.y * s,
-        oc * axis.x * axis.y + axis.z * s,  oc * axis.y * axis.y + c,           oc * axis.y * axis.z - axis.x * s,
-        oc * axis.z * axis.x - axis.y * s,  oc * axis.y * axis.z + axis.x * s,  oc * axis.z * axis.z + c
-    );
-}
-
-float saturate( float x ){
-    return clamp( x, 0.0, 1.0 );
-}
-
-vec2 quickHash( float p ){
-    vec2 r = vec2(
-        dot( vec2( p ), vec2( 123.123123, 34.12314)),
-        dot( vec2( p ), vec2( 1231.123123, 934.123123))
-    );
-
-    return fract( sin( r ) * 2342.12312 );
-}
-
+//constans for Lead Color
 const vec3 BASE_COLOR = vec3( 0.1, 0.4, 0.04 );
 const vec3 TIP_COLOR = vec3( 0.5, 0.7, 0.3 );
 
@@ -135,7 +127,6 @@ void main() {
     float CHUNK_SIZE = grassParams.y ;
     float GRASS_WIDTH = grassParams.z;
     float GRASS_HEIGHT = grassParams.w;
-
     float windControl = windSpeed * 0.15;
 
     //use index data to deduce the needed variables, which in turn decide the final position
@@ -169,7 +160,7 @@ void main() {
     float heightNoise = remap( noise( grassWorldPosition * 1.0 ), -1.0, 1.0, 0.8, 1.2 );
     height *= heightNoise;
 
-    //hasing world position for random value
+    //hashing world position for random value
     vec3 hashVal = hash( grassWorldPosition );
 
     //Bezier curve for animation bending
