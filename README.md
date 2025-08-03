@@ -50,6 +50,7 @@ Performance Results:
     <td> 100k </td>
     <td> 300k </td>
     <td> 500k </td>
+  </thead>
   <tbody>
     <tr>
       <td>  
