@@ -90,6 +90,15 @@ The JS Heap Memory hovers around 6.3MB to 9.3MB. Depending upong the Grass Stran
 - Procedural Generation
 - QuadTree for Spatial Querying
 
+## Lighting Used ( procedural ):
+- Specular lighting ( using Normals )
+- Flat Diffuse Colors
+- AO
+
+## Art Style
+
+A Toon Style art inspired by the mentioned games, but with still in-touch with realism: Height Variation for Grass Strands, Different Color Patches of Grass Strands ( Noise based ), Wind Mechanics and Light Interaction. And an environment, from Zelda, to fill up the background space.
+
 ## Intuition
 Normally, when creating a 3D object, one would just create a Mesh and that just works fine. But when the number of Meshes increase, this method simply fails to be performant ( too many draw calls ). The next probable choice is ( Batching )"Merging" Meshes with same materials together, and well that could be used but at the loss of "fine" control over geometry. Moving on, "Instancing" is the word that comes next in our minds, basically creating copies of same mesh multiple times, with different transformations. And that is the best solution in our case: Grass strand and multiple copies of it. 
 
