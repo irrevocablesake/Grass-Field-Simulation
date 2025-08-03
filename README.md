@@ -58,15 +58,15 @@ Performance Results:
           FPS 160
         </p>
       </td>
-         <tr>
+         
      <td>
       <img src="https://github.com/irrevocablesake/Grass-Field-Simulation/blob/master/images/300k.png" width="100%">
         <p style="text-align: center; font-style: italic; font-size: 14px; color: #555;">
           FPS 110
         </p></td>
     
-    </tr>
-     <tr>
+    
+     
      <td> <img src="https://github.com/irrevocablesake/Grass-Field-Simulation/blob/master/images/500k.png" width="100%">
         <p style="text-align: center; font-style: italic; font-size: 14px; color: #555;">
           FPS 90
@@ -74,9 +74,6 @@ Performance Results:
      </td>
     
     </tr>
-    </tr>
-    <tr></tr>
-    <tr></tr>
   </tbody>
 </table>
 </div>
