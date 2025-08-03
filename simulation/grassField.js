@@ -1,7 +1,6 @@
 import * as THREE from 'three'
 import DebugPanel from './DebugPanel.js'
 import ChunkManager from './chunkManager.js';
-import { PointerLockControls } from 'three/addons/controls/PointerLockControls.js';
 import Controller from './Controller.js';
 
 const CAMERA_HEIGHT = 3
@@ -70,12 +69,15 @@ export default class GrassField{
     }
 
     startSimulation(){
+        this._clock = new THREE.Clock();
+      
         this.setupScene()
         this.setupChunkManager()
         this.setupDebugPanel()
       
-        this._controller = new Controller( this._camera )
-        this._clock = new THREE.Clock();
+        this._controller = new Controller( this._camera, this._renderer )
+        this._controller.setup()
+        
     }
 
     simulate(){

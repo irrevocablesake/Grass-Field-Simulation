@@ -11,6 +11,7 @@ const GRASS_SEGMENTS_LOD = [
 
 const GRASS_WIDTH = 0.03
 const GRASS_HEIGHT = 2
+const MAX_INSTANCE_COUNT = 5000
 
 export default class GrassStrand{
     constructor( CHUNK_SIZE, STRANDS_PER_TILE ) {
@@ -49,6 +50,7 @@ export default class GrassStrand{
 		}
 
 		const geometry = new THREE.InstancedBufferGeometry()
+		geometry.maxInstanceCount = MAX_INSTANCE_COUNT
 		geometry.instanceCount = this._STRANDS_PER_TILE
 		geometry.setIndex(indices)
 		geometry.computeBoundingBox()

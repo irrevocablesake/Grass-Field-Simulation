@@ -1,4 +1,5 @@
 import * as THREE from 'three'
+import { PointerLockControls } from 'three/addons/controls/PointerLockControls.js';
 
 const CAMERA_HEIGHT = 3
 const CAMERA_CLAMP_X = new THREE.Vector3(10, CAMERA_HEIGHT, 10)
@@ -15,9 +16,10 @@ const MOVE_DIRECTION = new THREE.Vector3();
 const CAMERA_MOVE_SPEED = 10;
 
 export default class Controller {
-    constructor(camera) {
+    constructor(camera, renderer) {
         this._camera = camera
         this._controls = null
+        this._renderer = renderer
     }
 
     pointerLock(delta) {
