@@ -41,6 +41,16 @@ In this simulation, one can simulate 5 counts of Grass Strands: 100k, 200k, 300k
 </table>
 </div>
 
+**Conscise explanation:**
+- index.html, index.css, and index.js ( trigger point ): Base Setup
+- grassField.js: Responsible for Three.js Setup, this file acts like a communicator between files
+- Controller.js: Responsible for Player Movement
+- ChunkManager.js: Responsible for chunking up the Terrain, managing LOD, frustum culling and initializing grass strands
+- DebugPanel.js: Responsible for display stats panel and configurable panel ( listening to changes in configuration )
+- GrassStrand.js: Responsible for creation of a single blade of grass
+- vertex.vs, fragment.fs: Responsible for procedural generation
+- QuadTree.js: Spatial Querying
+
 ## Simulation Instructions
 
 **Stats Panel:** Present in the Top Left Corner of the screen, will display the metrics such as FPS, per frame MS etc..
