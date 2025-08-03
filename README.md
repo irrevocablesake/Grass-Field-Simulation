@@ -55,25 +55,11 @@ Performance Results:
       <td>  <img src="images/100K.png" width="100%">
         <p style="text-align: center; font-style: italic; font-size: 14px; color: #555;">
           FPS 160
-        </p></td>
-     
-    </tr>
-     <tr>
-     <td>
-      <img src="images/300K.png" width="100%">
-        <p style="text-align: center; font-style: italic; font-size: 14px; color: #555;">
-          FPS 110
-        </p></td>
-    
-    </tr>
-     <tr>
-     <td> <img src="images/500K.png" width="100%">
-        <p style="text-align: center; font-style: italic; font-size: 14px; color: #555;">
-          FPS 90
         </p>
-     </td>
-    
+      </td>
     </tr>
+    <tr></tr>
+    <tr></tr>
   </tbody>
 </table>
 </div>
