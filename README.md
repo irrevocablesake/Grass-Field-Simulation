@@ -47,20 +47,27 @@ Performance Results:
 <div align="center">
 <table>
   <thead>
-    <td> Blade Count </td>
-    <td> FPS </td>
+    <td> 100k </td>
+    <td> 300k </td>
+    <td> 500k </td>
   <tbody>
     <tr>
-      <td > 100k </td>
-      <td> 160 </td>
+       <img src="images/100K.png" width="100%">
+        <p style="text-align: center; font-style: italic; font-size: 14px; color: #555;">
+          FPS 160
+        </p>
     </tr>
      <tr>
-      <td > 300k </td>
-      <td> 110 </td>
+     <img src="images/normal/300K.png" width="100%">
+        <p style="text-align: center; font-style: italic; font-size: 14px; color: #555;">
+          FPS 110
+        </p>
     </tr>
      <tr>
-      <td > 500k </td>
-      <td> 90 </td>
+     <img src="images/normal/400K.png" width="100%">
+        <p style="text-align: center; font-style: italic; font-size: 14px; color: #555;">
+          FPS 90
+        </p>
     </tr>
   </tbody>
 </table>
