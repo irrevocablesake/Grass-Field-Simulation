@@ -52,7 +52,7 @@ Performance Results:
     <td> 500k </td>
   <tbody>
     <tr>
-      <td>  <img src="images/100K.png" width="100%">
+      <td>  <img src="https://github.com/irrevocablesake/Grass-Field-Simulation/blob/master/images/100k.png" width="100%">
         <p style="text-align: center; font-style: italic; font-size: 14px; color: #555;">
           FPS 160
         </p>
