@@ -29,14 +29,15 @@ In this simulation, one can simulate 5 counts of Grass Strands: 100k, 200k, 300k
 
 ## Resources
 - [ Shader Hash Functions ](https://github.com/Angelo1211/2021-Shaders/blob/master/hashes.glsl)
-- https://discourse.threejs.org/t/field-of-grass-swaying-in-the-wind/13965
-- https://tympanus.net/codrops/2025/02/04/how-to-make-the-fluffiest-grass-with-three-js/
-- https://discourse.threejs.org/t/lod-instancing/20524
-- https://www.youtube.com/watch?v=bp7REZBV4P4&t=120s
-- https://www.youtube.com/watch?v=OJxEcs0w_kE&t=1552s
-- https://www.youtube.com/watch?v=YO_A5w_fxRQ&t=303s
-- https://learnopengl.com/Lighting/Basic-Lighting
-- https://www.youtube.com/watch?v=Ibe1JBF5i5Y&t=307s
+- [ Field of Grass Swaying In The Wind ]( https://discourse.threejs.org/t/field-of-grass-swaying-in-the-wind/13965 )
+- [ How to Make the fluffiest grass with Three.js ]( https://tympanus.net/codrops/2025/02/04/how-to-make-the-fluffiest-grass-with-three-js/ )
+- [ LOD Instancing ]( https://discourse.threejs.org/t/lod-instancing/20524 )
+- 
+- [How do Major Video Games Render Grass?](https://www.youtube.com/watch?v=bp7REZBV4P4&t=120s)
+- [Coding Challenge #98.1: Quadtree Series](https://www.youtube.com/watch?v=OJxEcs0w_kE&t=1552s)
+- [3D World Generation: #3 (Quadtree & LOD)](https://www.youtube.com/watch?v=YO_A5w_fxRQ&t=303s)
+- [ Basic Lighting OpenGL ](https://learnopengl.com/Lighting/Basic-Lighting)
+- [ GDC Talk - Procedural Grass in 'Ghost of Tsushima' ](https://www.youtube.com/watch?v=Ibe1JBF5i5Y&t=307s)
 
 ## File Structure
 
