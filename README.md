@@ -47,35 +47,35 @@ Performance Results:
 <div align="center">
 <table>
   <thead>
-    <td> 100k </td>
-    <td> 300k </td>
-    <td> 500k </td>
+    <tr>
+      <th>100k</th>
+      <th>300k</th>
+      <th>500k</th>
+    </tr>
   </thead>
   <tbody>
     <tr>
       <td>  
-        <img src="https://github.com/irrevocablesake/Grass-Field-Simulation/blob/master/images/100k.png" width="100%">
+        <img src="https://raw.githubusercontent.com/irrevocablesake/Grass-Field-Simulation/master/images/100k.png" width="100%">
         <p style="text-align: center; font-style: italic; font-size: 14px; color: #555;">
           FPS 160
         </p>
       </td>
-         
-     <td>
-      <img src="https://github.com/irrevocablesake/Grass-Field-Simulation/blob/master/images/300k.png" width="100%">
+      <td>
+        <img src="https://raw.githubusercontent.com/irrevocablesake/Grass-Field-Simulation/master/images/300k.png" width="100%">
         <p style="text-align: center; font-style: italic; font-size: 14px; color: #555;">
           FPS 110
-        </p></td>
-    
-    
-     
-     <td> <img src="https://github.com/irrevocablesake/Grass-Field-Simulation/blob/master/images/500k.png" width="100%">
+        </p>
+      </td>
+      <td>
+        <img src="https://raw.githubusercontent.com/irrevocablesake/Grass-Field-Simulation/master/images/500k.png" width="100%">
         <p style="text-align: center; font-style: italic; font-size: 14px; color: #555;">
           FPS 90
         </p>
-     </td>
-    
+      </td>
     </tr>
   </tbody>
 </table>
 </div>
+
 
