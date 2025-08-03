@@ -27,6 +27,9 @@ A Grass Simulation Experiment with a **Toon Realism vibe** and **wind effects**.
 
 In this simulation, one can simulate 5 counts of Grass Strands: 100k, 200k, 300k, 400k, 500k and 10 levels of wind speed from 0 to 10. In addition to that, the world is explorable! Feel free to use keyboard and mouse to move around the 100 x 100 Grass Field
 
+## Index
+- [Art Style](#Art Style)
+
 ## Art Style
 
 A Toon Style art inspired by the mentioned games, but with still in-touch with realism: **Height Variation** for Grass Strands, Different **Color Patches** of Grass Strands ( Noise based ), **Wind Mechanics** and **Light Interaction**. And an environment, from Zelda, to fill up the background space.
