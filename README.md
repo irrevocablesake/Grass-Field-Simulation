@@ -52,22 +52,27 @@ Performance Results:
     <td> 500k </td>
   <tbody>
     <tr>
-       <img src="images/100K.png" width="100%">
+      <td>  <img src="images/100K.png" width="100%">
         <p style="text-align: center; font-style: italic; font-size: 14px; color: #555;">
           FPS 160
-        </p>
+        </p></td>
+     
     </tr>
      <tr>
-     <img src="images/300K.png" width="100%">
+     <td>
+      <img src="images/300K.png" width="100%">
         <p style="text-align: center; font-style: italic; font-size: 14px; color: #555;">
           FPS 110
-        </p>
+        </p></td>
+    
     </tr>
      <tr>
-     <img src="images/500K.png" width="100%">
+     <td> <img src="images/500K.png" width="100%">
         <p style="text-align: center; font-style: italic; font-size: 14px; color: #555;">
           FPS 90
         </p>
+     </td>
+    
     </tr>
   </tbody>
 </table>
