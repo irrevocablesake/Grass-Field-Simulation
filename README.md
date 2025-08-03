@@ -43,7 +43,7 @@ System Information:
 - GPU: NVIDIA GeForce RTX 4050 Laptop GPU
 - RAM: 16GB, SSD
 
-Performance Results:
+### Performance Results:
 <div align="center">
 <table>
   <thead>
@@ -78,10 +78,10 @@ Performance Results:
 </table>
 </div>
 
-Memory:
+### Memory:
 The JS Heap Memory hovers around 6.3MB to 9.3MB. Depending upong the Grass Strand count and movement
 
-Performance Techniques:
+### Performance Techniques:
 
 - Chunking / Tiling of the terrain
 - Custom Frustum Culling
@@ -90,11 +90,7 @@ Performance Techniques:
 - Procedural Generation
 - QuadTree for Spatial Querying
 
-- Lighting Used ( procedural ):
-- specular lighting
-- Flat diffuse lighting
-- AO
-
+## Intuition
 Normally, when creating a 3D object, one would just create a Mesh and that just works fine. But when the number of Meshes increase, this method simply fails to be performant ( too many draw calls ). The next probable choice is ( Batching )"Merging" Meshes with same materials together, and well that could be used but at the loss of "fine" control over geometry. Moving on, "Instancing" is the word that comes next in our minds, basically creating copies of same mesh multiple times, with different transformations. And that is the best solution in our case: Grass strand and multiple copies of it. 
 
 But if we just create everything on CPU, it's of no use because we are talking about 100k to 500k grass strands. Each Frame, not only we have to handle the data related to those strands, but update transformations, materials and LODs. That's why we move everything to GPU, "GPU Instancing". We utilize the power of GPU, and procedurally generate everything: the grass strand itself, positioning multiple instances, animating and finally colouring them. This all is shader magic
