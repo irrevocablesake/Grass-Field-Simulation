@@ -29,6 +29,18 @@ In this simulation, one can simulate 5 counts of Grass Strands: 100k, 200k, 300k
 
 ## File Structure
 
+<div align="center">
+<table>
+  <tbody>
+    <tr>
+      <td>  
+        <img src="https://raw.githubusercontent.com/irrevocablesake/Grass-Field-Simulation/master/images/fileStructure.png" width="100%">
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
 ## Simulation Instructions
 
 **Stats Panel:** Present in the Top Left Corner of the screen, will display the metrics such as FPS, per frame MS etc..
