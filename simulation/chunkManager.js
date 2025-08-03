@@ -64,7 +64,7 @@ export default class ChunkManager {
         const frustum = new THREE.Frustum()
         frustum.setFromProjectionMatrix( m )
 
-        const cameraBoundary = new Rectangle( this._camera.position.x, this._camera.position.z,  200, 200 )
+        const cameraBoundary = new Rectangle( this._camera.position.x, this._camera.position.z,  100, 100 )
         const visiblePoints = this._quadTree.query( cameraBoundary )
 
         const margin = 1
