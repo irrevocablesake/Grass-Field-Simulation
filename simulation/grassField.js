@@ -160,6 +160,6 @@ export default class GrassField{
         };
 
         const textureLoader = new THREE.TextureLoader(this._loadingManager);
-        this._textures['environment'] = textureLoader.load('../grassField/public/environment.webp')
+        this._textures['environment'] = textureLoader.load('../Grass-Field-Simulation/public/environment.webp')
     }
 }
