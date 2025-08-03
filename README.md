@@ -36,5 +36,49 @@ Configuration Panel: Present in the Top Right Corner of the screen, will display
 - The simulation is initilized with 100k blades and Wind Speed 2
 - Use WASD keyboard to move around and mouse to decide the direction to move towards
 
+## Performance Metrics
 
+System Information: 
+- CPU: 13th Gen Intel(R) Core(TM) i7-13700HX
+- GPU: NVIDIA GeForce RTX 4050 Laptop GPU
+- RAM: 16GB, SSD
+
+Performance Results:
+<div align="center">
+<table>
+  <thead>
+    <td>
+      Blade Count
+    </td>
+    <td>
+      FPS
+    </td>
+  <tbody>
+    <tr>
+      <td >
+        100k
+      </td>
+      <td>
+       adsad
+      </td>
+    </tr>
+     <tr>
+      <td >
+        300k
+      </td>
+      <td>
+       adsad
+      </td>
+    </tr>
+     <tr>
+      <td >
+        500k
+      </td>
+      <td>
+       adsad
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
