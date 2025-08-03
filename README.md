@@ -9,13 +9,13 @@ A Grass Simulation Experiment with a Toon Realism vibe and wind effects. Not onl
   <tbody>
     <tr>
       <td >
-        <img src="images/zelda.png" width="100%">
+        <img src="images/zelda.jpg" width="100%">
         <p style="text-align: center; font-style: italic; font-size: 14px; color: #555;">
           Breath of the Wild
         </p>
       </td>
       <td>
-        <img src="images/tsushima.png" width="100%">
+        <img src="images/tsushima.jpg" width="100%">
         <p style="text-align: center; font-style: italic; font-size: 14px; color: #555;">
           Ghost of Tsushima
         </p>
