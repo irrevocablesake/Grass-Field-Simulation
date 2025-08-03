@@ -47,36 +47,20 @@ Performance Results:
 <div align="center">
 <table>
   <thead>
-    <td>
-      Blade Count
-    </td>
-    <td>
-      FPS
-    </td>
+    <td> Blade Count </td>
+    <td> FPS </td>
   <tbody>
     <tr>
-      <td >
-        100k
-      </td>
-      <td>
-       adsad
-      </td>
+      <td > 100k </td>
+      <td> 160 </td>
     </tr>
      <tr>
-      <td >
-        300k
-      </td>
-      <td>
-       adsad
-      </td>
+      <td > 300k </td>
+      <td> 110 </td>
     </tr>
      <tr>
-      <td >
-        500k
-      </td>
-      <td>
-       adsad
-      </td>
+      <td > 500k </td>
+      <td> 90 </td>
     </tr>
   </tbody>
 </table>
