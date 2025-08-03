@@ -29,6 +29,12 @@ In this simulation, one can simulate 5 counts of Grass Strands: 100k, 200k, 300k
 
 ## Index
 - [Art Style](#Art-Style)
+- [Simulation Instructions](#Simulation-Instructions)
+- [Performance Metrics](#Performance-Metrics)
+- [Lighting Used ( procedural )](#Lighting-Used-(-procedural))
+- [File Structure](File-Structure)
+- [Intuition](#Intuition)
+- [Resources](#Resources)
 
 ## Art Style
 
