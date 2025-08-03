@@ -27,6 +27,17 @@ A Grass Simulation Experiment with a **Toon Realism vibe** and **wind effects**.
 
 In this simulation, one can simulate 5 counts of Grass Strands: 100k, 200k, 300k, 400k, 500k and 10 levels of wind speed from 0 to 10. In addition to that, the world is explorable! Feel free to use keyboard and mouse to move around the 100 x 100 Grass Field
 
+## Resources
+- [ Shader Hash Functions ](https://github.com/Angelo1211/2021-Shaders/blob/master/hashes.glsl)
+- https://discourse.threejs.org/t/field-of-grass-swaying-in-the-wind/13965
+- https://tympanus.net/codrops/2025/02/04/how-to-make-the-fluffiest-grass-with-three-js/
+- https://discourse.threejs.org/t/lod-instancing/20524
+- https://www.youtube.com/watch?v=bp7REZBV4P4&t=120s
+- https://www.youtube.com/watch?v=OJxEcs0w_kE&t=1552s
+- https://www.youtube.com/watch?v=YO_A5w_fxRQ&t=303s
+- https://learnopengl.com/Lighting/Basic-Lighting
+- https://www.youtube.com/watch?v=Ibe1JBF5i5Y&t=307s
+
 ## File Structure
 
 <div align="center">
