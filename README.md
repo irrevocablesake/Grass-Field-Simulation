@@ -32,7 +32,7 @@ In this simulation, one can simulate 5 counts of Grass Strands: 100k, 200k, 300k
 - [Simulation Instructions](#Simulation-Instructions)
 - [Performance Metrics](#Performance-Metrics)
 - [Lighting Used ( procedural )](#Lighting-Used)
-- [File Structure](File-Structure)
+- [File Structure](#File-Structure)
 - [Intuition](#Intuition)
 - [Resources](#Resources)
 
@@ -102,7 +102,7 @@ The **JS Heap Memory** hovers around **6.3MB** to **9.3MB**. Depending upong the
 - GPU Instancing
 - Procedural Generation
 - QuadTree for Spatial Querying
-- 
+
 ## Lighting Used:
 - Specular lighting ( using Normals )
 - Flat Diffuse Colors
