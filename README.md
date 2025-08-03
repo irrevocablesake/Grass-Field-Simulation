@@ -1,6 +1,6 @@
 # Grass Field Simulation
 
-Link to Simulation: https://irrevocablesake.github.io/Grass-Field-Simulation/
+Simulation Website: [ Click here to open the simulation ]( https://irrevocablesake.github.io/Grass-Field-Simulation/ )
 
 Time to touch some grass, well not literally but....it's a Grass Simulation
 
