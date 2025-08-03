@@ -78,4 +78,7 @@ Performance Results:
 </table>
 </div>
 
+Memory:
+The JS Heap Memory hovers around 6.3MB to 9.3MB. Depending upong the Grass Strand count and movement
+
 
