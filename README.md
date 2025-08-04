@@ -1,5 +1,7 @@
 # Grass Field Simulation
 
+<img src="images/hero" width="100%">
+
 Simulation Website: [ Click here to open the simulation ]( https://irrevocablesake.github.io/Grass-Field-Simulation/ )
 
 Time to touch some grass, well not literally but....it's a Grass Simulation
