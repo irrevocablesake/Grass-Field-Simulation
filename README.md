@@ -1,6 +1,6 @@
 # Grass Field Simulation
 
-<img src="images/hero" width="100%">
+<img src="images/hero.png" width="100%">
 
 Simulation Website: [ Click here to open the simulation ]( https://irrevocablesake.github.io/Grass-Field-Simulation/ )
 
